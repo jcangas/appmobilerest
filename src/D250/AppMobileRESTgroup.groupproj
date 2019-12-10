@@ -1,0 +1,90 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{3057D332-5A67-45C7-A9C4-D69025F0E443}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="AppMobileRESTApi.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AppMobileREST.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AppMobileRESTApi">
+        <MSBuild Projects="AppMobileRESTApi.dproj"/>
+    </Target>
+    <Target Name="AppMobileRESTApi:Clean">
+        <MSBuild Projects="AppMobileRESTApi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AppMobileRESTApi:Make">
+        <MSBuild Projects="AppMobileRESTApi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AppMobileREST">
+        <MSBuild Projects="AppMobileREST.dproj"/>
+    </Target>
+    <Target Name="AppMobileREST:Clean">
+        <MSBuild Projects="AppMobileREST.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AppMobileREST:Make">
+        <MSBuild Projects="AppMobileREST.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AppMobileRESTApi;AppMobileREST"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AppMobileRESTApi:Clean;AppMobileREST:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AppMobileRESTApi:Make;AppMobileREST:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+    <ItemGroup Condition="'$(BuildGroup)'=='Win32'">
+        <BuildGroupProject Include="AppMobileREST.dproj">
+            <ProjectGuid>{22CD5384-D683-4779-9F28-127AD8AEDA70}</ProjectGuid>
+            <Configurations>Debug;Release</Configurations>
+            <Platforms>Android;Win32</Platforms>
+            <Enabled>True</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="AppMobileRESTApi.dproj">
+            <ProjectGuid>{23904BCD-91B6-46E9-BADE-1592B0A77F9E}</ProjectGuid>
+            <Configurations>Debug;Release</Configurations>
+            <Platforms>Win32</Platforms>
+            <Enabled>True</Enabled>
+        </BuildGroupProject>
+    </ItemGroup>
+    <ItemGroup Condition="'$(BuildGroup)'=='Release'">
+        <BuildGroupProject Include="AppMobileREST.dproj">
+            <ProjectGuid>{22CD5384-D683-4779-9F28-127AD8AEDA70}</ProjectGuid>
+            <Configurations>Release</Configurations>
+            <Platforms>Android;iOSDevice64;Win32</Platforms>
+            <Enabled>True</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="AppMobileRESTApi.dproj">
+            <ProjectGuid>{23904BCD-91B6-46E9-BADE-1592B0A77F9E}</ProjectGuid>
+            <Configurations>Release</Configurations>
+            <Platforms>Win64</Platforms>
+            <Enabled>True</Enabled>
+        </BuildGroupProject>
+    </ItemGroup>
+    <ItemGroup Condition="'$(BuildGroup)'=='Ship'">
+        <BuildGroupProject Include="AppMobileREST.dproj">
+            <ProjectGuid>{22CD5384-D683-4779-9F28-127AD8AEDA70}</ProjectGuid>
+            <Configurations>Release</Configurations>
+            <Platforms>iOSDevice64</Platforms>
+            <Enabled>True</Enabled>
+        </BuildGroupProject>
+        <BuildGroupProject Include="AppMobileRESTApi.dproj">
+            <ProjectGuid>{23904BCD-91B6-46E9-BADE-1592B0A77F9E}</ProjectGuid>
+            <Configurations>Debug</Configurations>
+            <Platforms>Win32</Platforms>
+            <Enabled>False</Enabled>
+        </BuildGroupProject>
+    </ItemGroup>
+</Project>

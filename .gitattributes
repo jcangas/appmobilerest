@@ -1,0 +1,72 @@
+########################################################
+# Set default behavior to automatically normalize line endings.
+#######################################################
+*           text=auto
+
+########################################################
+# Typical text files
+########################################################
+C++ files
+*.h         text eol=crlf
+*.cpp       text eol=crlf
+
+# Delphi files
+*.dproj      text eol=crlf
+*.deployproj text eol=crlf
+*.vlb        text eol=crlf
+*.optset     text eol=crlf
+*.pas        text eol=crlf
+*.dpr        text eol=crlf
+*.bpr        text eol=crlf
+*.drc        text eol=crlf
+*.bpg        text eol=crlf
+*.cfg        text eol=crlf
+*.dof        text eol=crlf
+*.groupproj  text eol=crlf
+*.bdsgroup   text eol=crlf
+*.dfm        text eol=crlf
+*.fmx        text eol=crlf
+*.otares     binary
+*.res        binary
+*.keystore   binary
+
+
+# Win files
+*.rc        text eol=crlf
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+*.dll       binary
+*.exe       binary
+
+########################################################
+# Set the merge driver for project files
+#######################################################
+
+*.dproj        merge=binary
+*.groupproj     merge=binary
+
+########################################################
+# image files are treated as binary by default.
+########################################################
+*.gif       binary
+*.bmp       binary
+*.jpeg      binary
+*.jpg       binary
+*.png       binary
+*.pdf       binary
+*.ico       binary
+*.icns      binary
+
+# Database
+*.sdb       binary
+
+# Other
+*.xlsx      binary
+*.sql       text eol=crlf
+*.txt       text eol=crlf
+*.md        text eol=crlf
+*.mdown     text eol=crlf
+*.adoc      text eol=crlf
+*.json      text eol=lf
+*.xml       text eol=crlf
+*.ini       text eol=crlf

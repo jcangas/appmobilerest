@@ -1,2 +1,2 @@
 # appmobilerest
-Ejemplo aplicación Mobil sobre servicios Datasnap/REST
+Aplicación Mobil sobre servicios Datasnap/REST

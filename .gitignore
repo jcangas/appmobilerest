@@ -1,0 +1,48 @@
+#----------------
+# O.S. related
+#----------------
+*.lib
+*.obj
+*.exe
+*.dll
+*.~*
+*.bak
+Thumbs.db
+.DS_Store
+
+#----------------
+# SCM related
+#----------------
+.svn
+
+#----------------
+# Delphi related
+#----------------
+*.bpl
+*.bpi
+*.dcu
+*.dcp
+*.ddp
+*.drc
+*.local
+*.identcache
+*.dsk
+*.stat
+*.tvsconfig
+__history
+__astcache
+__recovery
+ModelSupport_*
+LibrarySupport
+
+
+#----------------
+# Project related
+#----------------
+out/
+deprecated/
+vendor/
+Legacy/
+!redist/**
+
+
