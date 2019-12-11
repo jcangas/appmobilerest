@@ -1,5 +1,8 @@
 {
   "scripts": {
-  "convert": "docsify-pdf-converter"
+    "convert": "node_modules/.bin/docsify-pdf-converter"
+  },
+  "devDependencies": {
+    "docsify-pdf-converter": "^2.0.7"
   }
 }

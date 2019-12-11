@@ -50,3 +50,4 @@ static/
 !redist/**
 
 
+/node_modules
