@@ -135,7 +135,7 @@ procedure TWebModule1.DSRESTWebDispatcher1ParseRequest(Sender: TObject;
 begin
   //
   ASegments.Delimiter := '/';
-  Log.d('[%s] %s', [ARequest, ASegments.DelimitedText]);
+  Log.d('[%s] %s', [ARequest, ASegments.DelimitedText]);/// en windos esto llama a OutputDebuString()
 end;
 
 procedure TWebModule1.DSRESTWebDispatcher1ParsingRequest(Sender: TObject;

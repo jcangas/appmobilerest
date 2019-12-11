@@ -13,7 +13,7 @@ object MainForm: TMainForm
   object TopToolBar: TToolBar
     Anchors = []
     Size.Width = 455.000000000000000000
-    Size.Height = 46.000000000000000000
+    Size.Height = 48.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object ToolBarLabel: TLabel
@@ -21,7 +21,7 @@ object MainForm: TMainForm
       Align = Contents
       Enabled = True
       Size.Width = 455.000000000000000000
-      Size.Height = 46.000000000000000000
+      Size.Height = 48.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'toollabel'
       TextSettings.HorzAlign = Center
@@ -31,8 +31,8 @@ object MainForm: TMainForm
       Align = MostLeft
       Enabled = True
       ImageIndex = -1
-      Size.Width = 46.000000000000000000
-      Size.Height = 46.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'backtoolbutton'
     end
@@ -41,9 +41,9 @@ object MainForm: TMainForm
       Align = MostRight
       Enabled = True
       ImageIndex = -1
-      Position.X = 409.000000000000000000
-      Size.Width = 46.000000000000000000
-      Size.Height = 46.000000000000000000
+      Position.X = 407.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'nexttoolbutton'
     end
@@ -52,22 +52,22 @@ object MainForm: TMainForm
     Align = Client
     FullSize = True
     Size.Width = 455.000000000000000000
-    Size.Height = 475.000000000000000000
+    Size.Height = 471.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 1
     TabPosition = None
     Sizes = (
       455s
-      475s
+      471s
       455s
-      475s)
+      471s)
     object TabItem1: TTabItem
       CustomIcon = <
         item
         end>
-      IsSelected = False
+      IsSelected = True
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
@@ -83,7 +83,7 @@ object MainForm: TMainForm
         ItemIndex = 0
         Align = Client
         Size.Width = 455.000000000000000000
-        Size.Height = 475.000000000000000000
+        Size.Height = 471.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         OnItemClick = ListView1ItemClick
@@ -94,19 +94,19 @@ object MainForm: TMainForm
       CustomIcon = <
         item
         end>
-      IsSelected = True
+      IsSelected = False
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
-      Text = '-33'
+      Text = '01/11/2019 0:58:00'
       ExplicitSize.cx = 8.000000000000000000
       ExplicitSize.cy = 8.000000000000000000
       object NumberCtl: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         TabOrder = 2
-        Text = '-33'
+        Text = '01/11/2019 0:58:00'
         Position.X = 64.000000000000000000
         Position.Y = 72.000000000000000000
         Size.Width = 100.000000000000000000
@@ -135,7 +135,7 @@ object MainForm: TMainForm
         Align = Bottom
         CanFocus = True
         ClipChildren = True
-        Position.Y = 220.000000000000000000
+        Position.Y = 216.000000000000000000
         Size.Width = 455.000000000000000000
         Size.Height = 255.000000000000000000
         Size.PlatformDefault = False
@@ -176,9 +176,9 @@ object MainForm: TMainForm
   object BottomToolBar: TToolBar
     Align = Bottom
     Anchors = [akLeft]
-    Position.Y = 521.000000000000000000
+    Position.Y = 519.000000000000000000
     Size.Width = 455.000000000000000000
-    Size.Height = 46.000000000000000000
+    Size.Height = 48.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'bottomtoolbar'
     TabOrder = 2
@@ -204,7 +204,7 @@ object MainForm: TMainForm
   object BindingsList: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 28
+    Left = 36
     Top = 165
     object LinkListControlToField1: TLinkListControlToField
       Category = 'Quick Bindings'
@@ -262,7 +262,7 @@ object MainForm: TMainForm
       end
       item
         Name = 'Number'
-        Generator = 'Integers'
+        Generator = 'DateTime'
         ReadOnly = False
       end
       item

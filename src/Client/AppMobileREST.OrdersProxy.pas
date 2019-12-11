@@ -25,6 +25,7 @@ type
     function GetResponseResult(const Request: TRestRequest): TJSONArray;
   public
     function GetAll: TObjectList<TOrder>;
+    ['[GET]/orders/{order_id}/orderitems']
     function GetOrderItems(const Order: TOrder): TObjectList<TOrderItem>;
   end;
 
@@ -58,6 +59,7 @@ begin
   JsonResponse.Values['result'].TryGetValue(Result);
 end;
 
+
 // REST url: [GET]/orders/{order_id}/orderitems
 function TOrdersProxy.GetOrderItems(const Order: TOrder): TObjectList<TOrderItem>;
 const
@@ -86,6 +88,7 @@ const
 var
   jsonList: TJSONArray;
 begin
+
   Logger.Debug('call GetAll');
   OrdersService.Method := HttpVerb;
   OrdersService.ResourceSuffix := MethodUrl;
