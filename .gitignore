@@ -46,6 +46,7 @@ scripts/
 obsolete/
 vendor/
 Legacy/
+static/
 !redist/**
 
 

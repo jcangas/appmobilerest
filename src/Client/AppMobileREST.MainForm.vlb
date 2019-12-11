@@ -2,7 +2,7 @@
 Coordinates=238,1,67,33
 
 [TabItem2]
-Coordinates=930,60,59,51
+Coordinates=350,40,59,51
 ExplicitSubNodes=Text
 
 [NextTabAction1]
@@ -15,7 +15,7 @@ Coordinates=10,222,72,33
 Coordinates=368,1,113,33
 
 [TabItem1]
-Coordinates=970,250,59,51
+Coordinates=710,150,59,51
 ExplicitSubNodes=Text
 
 [btnNext]
@@ -78,15 +78,11 @@ Coordinates=18,297,121,69
 [TotalCtl]
 Coordinates=490,340,52,51
 
-[NumberCt]
-Coordinates=490,180,64,51
-Visible=True
-
 [ReferenceCtl]
 Coordinates=500,260,77,51
 
 [OrdersBindSource]
-Coordinates=310,110,105,141
+Coordinates=310,110,105,159
 Visible=True
 
 [AppData.RESTClient]
@@ -102,6 +98,28 @@ Coordinates=200,280,142,285
 Coordinates=453,464,151,105
 
 [OrderItemsBindSource]
-Coordinates=880,40,138,141
+Coordinates=850,20,127,141
+Visible=True
+
+[Label1]
+Coordinates=99,1,46,51
+
+[OrdersProxy.OrdersService]
+Coordinates=311,323,150,87
+
+[Label2]
+Coordinates=240,167,46,51
+
+[Label3]
+Coordinates=60,323,46,51
+
+[OrdersProxy.RESTClient]
+Coordinates=628,1,135,69
+
+[OrdersProxy.OrdersResponse]
+Coordinates=119,304,162,285
+
+[NumberCtl]
+Coordinates=490,180,66,51
 Visible=True
 

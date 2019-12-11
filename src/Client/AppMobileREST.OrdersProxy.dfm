@@ -8,7 +8,7 @@ object OrdersProxy: TOrdersProxy
     AcceptCharset = 'UTF-8, *;q=0.8'
     Params = <>
     HandleRedirects = True
-    Left = 112
+    Left = 40
     Top = 24
   end
   object OrdersService: TRESTRequest
@@ -16,8 +16,8 @@ object OrdersProxy: TOrdersProxy
     Params = <>
     Resource = 'Orders'
     SynchronizedEvents = False
-    Left = 112
-    Top = 112
+    Left = 120
+    Top = 32
   end
   object OrdersResponse: TRESTResponse
     Left = 112
