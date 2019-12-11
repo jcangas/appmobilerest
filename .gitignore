@@ -40,7 +40,10 @@ LibrarySupport
 # Project related
 #----------------
 out/
-deprecated/
+/dsr.bat
+/project.cmd
+scripts/
+obsolete/
 vendor/
 Legacy/
 !redist/**
