@@ -41,6 +41,12 @@ inherited MainForm_iPhone4in: TMainForm_iPhone4in
       Size.Height = 11.000000000000000000
       ExplicitSize.cx = 8.000000000000000000
       ExplicitSize.cy = 8.000000000000000000
+      inherited NumberCtl: TEdit
+        Size.Height = 30.000000000000000000
+      end
+      inherited ReferenceCtl: TEdit
+        Size.Height = 30.000000000000000000
+      end
       inherited StringGrid1: TStringGrid
         Position.Y = 205.000000000000000000
         Size.Width = 320.000000000000000000
@@ -53,10 +59,5 @@ inherited MainForm_iPhone4in: TMainForm_iPhone4in
     Position.Y = 504.000000000000000000
     Size.Width = 320.000000000000000000
     Size.Height = 44.000000000000000000
-  end
-  inherited StyleBook1: TStyleBook
-    Styles = <
-      item
-      end>
   end
 end

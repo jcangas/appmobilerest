@@ -33,20 +33,22 @@ type
     TabItem2: TTabItem;
     BottomToolBar: TToolBar;
     BindingsList: TBindingsList;
-    NumberCt: TEdit;
+    NumberCtl: TEdit;
     ReferenceCtl: TEdit;
     TotalCtl: TEdit;
     StringGrid1: TStringGrid;
     ListView1: TListView;
     LinkListControlToField1: TLinkListControlToField;
-    BindExpression1: TBindExpression;
     OrdersBindSource: TPrototypeBindSource;
     LinkControlToField1: TLinkControlToField;
     LinkControlToField2: TLinkControlToField;
     LinkControlToField3: TLinkControlToField;
     OrderItemsBindSource: TPrototypeBindSource;
     LinkGridToDataSource__OrderItemsBindSource: TLinkGridToDataSource;
-    StyleBook1: TStyleBook;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    LinkPropertyToFieldText: TLinkPropertyToField;
     procedure FormCreate(Sender: TObject);
     procedure TitleActionUpdate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
@@ -70,9 +72,6 @@ implementation
 uses System.JSON, AppMobileREST.OrdersProxy;
 
 {$R *.fmx}
-{$R *.LgXhdpiPh.fmx ANDROID}
-{$R *.iPhone4in.fmx IOS}
-{$R *.Windows.fmx MSWINDOWS}
 
 procedure TMainForm.TitleActionUpdate(Sender: TObject);
 begin
@@ -88,7 +87,7 @@ end;
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
   { This defines the default active tab at runtime }
-  TabControl1.First(TTabTransition.None);
+  TabControl1.First(TTabTransition.Slide);
 end;
 
 procedure TMainForm.FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);

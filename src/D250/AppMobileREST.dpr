@@ -13,7 +13,7 @@ uses
 
 begin
   Application.Initialize;
-  Logger.Debug('Starting Application');
+  Logger.Debug('Starting AppMobileRest' );
   Application.CreateForm(TOrdersProxy, OrdersProxy);
   Application.CreateForm(TMainForm, MainForm);
   Application.Run;

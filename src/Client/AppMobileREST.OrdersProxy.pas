@@ -54,9 +54,11 @@ var
 begin
   if not Request.Response.JSONValue.TryGetValue(JsonResponse) then
     raise Exception.Create('Error Message');
+  // Obtiene el result de la respuesta que siempre es TJSONArray
   JsonResponse.Values['result'].TryGetValue(Result);
 end;
 
+// REST url: [GET]/orders/{order_id}/orderitems
 function TOrdersProxy.GetOrderItems(const Order: TOrder): TObjectList<TOrderItem>;
 const
   HttpVerb = rmGET;
@@ -73,8 +75,10 @@ begin
   OrdersService.Execute;
   GetResponseResult(OrdersService).Items[0].TryGetValue(jsonList);
   Result := TJSON.ToObjectList<TOrderItem>(jsonList);
+
 end;
 
+// REST url: [GET]/orders/
 function TOrdersProxy.GetAll: TObjectList<TOrder>;
 const
   HttpVerb = rmGET;
@@ -82,10 +86,13 @@ const
 var
   jsonList: TJSONArray;
 begin
+  Logger.Debug('call GetAll');
   OrdersService.Method := HttpVerb;
   OrdersService.ResourceSuffix := MethodUrl;
   OrdersService.Execute;
+  // Esperamos como respuesta un elemento: la lista de orders
   GetResponseResult(OrdersService).Items[0].TryGetValue(jsonList);
+  Logger.Debug('GetAll result: ' +jsonlist.ToString);
   Result := TJSON.ToList<TOrder>(jsonList);
 end;
 

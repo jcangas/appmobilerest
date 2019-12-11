@@ -1,0 +1,5 @@
+{
+  "scripts": {
+  "convert": "docsify-pdf-converter"
+  }
+}

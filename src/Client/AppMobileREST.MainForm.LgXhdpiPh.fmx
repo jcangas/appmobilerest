@@ -28,8 +28,6 @@ inherited MainForm_LgXhdpiPh: TMainForm_LgXhdpiPh
       450s
       599s)
     inherited TabItem1: TTabItem
-      Size.Width = 8.000000000000000000
-      Size.Height = 8.000000000000000000
       ExplicitSize.cx = 8.000000000000000000
       ExplicitSize.cy = 8.000000000000000000
       inherited ListView1: TListView
@@ -38,8 +36,6 @@ inherited MainForm_LgXhdpiPh: TMainForm_LgXhdpiPh
       end
     end
     inherited TabItem2: TTabItem
-      Size.Width = 8.000000000000000000
-      Size.Height = 8.000000000000000000
       ExplicitSize.cx = 8.000000000000000000
       ExplicitSize.cy = 8.000000000000000000
       inherited StringGrid1: TStringGrid
@@ -54,10 +50,5 @@ inherited MainForm_LgXhdpiPh: TMainForm_LgXhdpiPh
     Position.Y = 647.000000000000000000
     Size.Width = 450.000000000000000000
     Size.Height = 48.000000000000000000
-  end
-  inherited StyleBook1: TStyleBook
-    Styles = <
-      item
-      end>
   end
 end
