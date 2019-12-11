@@ -9,6 +9,7 @@ object OrdersService: TOrdersService
       'Password=masterkey'
       'DriverID=fB')
     LoginPrompt = False
+    BeforeConnect = DBConnectionBeforeConnect
     Left = 48
     Top = 24
   end

@@ -16,7 +16,7 @@ object OrdersProxy: TOrdersProxy
     Params = <>
     Resource = 'Orders'
     SynchronizedEvents = False
-    Left = 120
+    Left = 128
     Top = 32
   end
   object OrdersResponse: TRESTResponse

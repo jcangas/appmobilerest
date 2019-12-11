@@ -35,6 +35,7 @@ type
     DBConnection: TFDConnection;
     Query: TFDQuery;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    procedure DBConnectionBeforeConnect(Sender: TObject);
   private
   public
     function Get(const ID: Integer): TJSONValue;
@@ -76,6 +77,11 @@ begin
   Result := Server.JSONUtils.TJSON.ReadRow(Query);
 end;
 
+procedure TOrdersService.DBConnectionBeforeConnect(Sender: TObject);
+begin
+ // codigo para configurar la conexion a BD antes de abrir
+end;
+
 function TOrdersService.Delete(const ID: Integer): TJSONValue;
 begin
   // To Do
@@ -104,6 +110,8 @@ begin
   Result := TJSONBool.Create(Query.ExecSQL(True) = 1);
 end;
 
+//ruta segun DS de fabrica /api/TOrdersService/GetOrderItems/2
+//ruta REST estandar/api/orders/2/items/
 function TOrdersService.GetOrderItems(const ID: Integer): TJSONValue;
 var
   ItemsService: TOrderItemsService;

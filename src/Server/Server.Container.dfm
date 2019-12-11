@@ -32,8 +32,8 @@ object WebModule1: TWebModule1
     OnParseRequest = DSRESTWebDispatcher1ParseRequest
     OnParsingRequest = DSRESTWebDispatcher1ParsingRequest
     WebDispatch.PathInfo = 'api*'
-    Left = 192
-    Top = 75
+    Left = 120
+    Top = 83
   end
   object OrdersServiceFactory: TDSServerClass
     OnGetClass = OrdersServiceFactoryGetClass
@@ -111,7 +111,7 @@ object WebModule1: TWebModule1
     OnGetClass = OrderItemsServiceFactoryGetClass
     Server = DSServer
     LifeCycle = 'Invocation'
-    Left = 208
-    Top = 19
+    Left = 312
+    Top = 91
   end
 end
